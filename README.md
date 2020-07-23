@@ -50,3 +50,5 @@ GROUP BY utm_campaign
 ORDER BY 2 desc;
 ```
 ![Results Returned By Query](https://github.com/omcevoy/CoolTShirts/blob/master/lastToPurch.png)
+
+My immediate take away from these results is that despite the marketing campaign generating a lot of first touches, none of them led to a significant amount of purchases. 
