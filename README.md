@@ -51,4 +51,4 @@ ORDER BY 2 desc;
 ```
 ![Results Returned By Query](https://github.com/omcevoy/CoolTShirts/blob/master/lastToPurch.png)
 
-My immediate take away from these results is that despite the marketing campaign generating a lot of first touches, none of them led to a significant amount of purchases. What I was skeptical of is the fact that 3 campaigns brought in around 1500 new visitors yet less than 30 
+My immediate take away from these results is that despite the marketing campaign generating a lot of first touches, none of them led to a significant amount of purchases. What I was skeptical of is the fact that 3 campaigns brought in around 1810 new visitors yet only 27, *~.015%*, of those new visitors ended up purchasing something. So I decided to look into what happened to those customers. 
