@@ -27,7 +27,9 @@ ORDER BY 2 desc;
 ```
 ![Results Returned By Query](https://github.com/omcevoy/CoolTShirts/blob/master/firstTouchVals.png)
 
-As shown in the above image, this query returns the campaigns and the amount of first touches the campaign generated. While first touches and page visits are certainly important, what truly matters is whether or not these visitors are making purchases. To better gauge this I looked at the last touch of the users, instead of first touch, and specifically the users whose last touch occurred on the purchase page. 
+As shown in the above image, this query returns the campaigns and the amount of first touches the campaign generated. The interview generated the most first touches, followed closely by the articles on NYT & BuzzFeed. 
+
+While first touches are important for determining which campaigns brought users to the site, we ultimately want the users to make purchases. To help determine which campaigns are contributing to purchases, we instead focus on the last touch. 
 
 ```
 WITH last_touch AS (
@@ -51,4 +53,6 @@ ORDER BY 2 desc;
 ```
 ![Results Returned By Query](https://github.com/omcevoy/CoolTShirts/blob/master/lastToPurch.png)
 
-My immediate take away from these results is that despite the marketing campaign generating a lot of first touches, none of them led to a significant amount of purchases. What I was skeptical of is the fact that 3 campaigns brought in around 1810 new visitors yet only 27, *~.015%*, of those new visitors ended up purchasing something. So I decided to look into what happened to those customers. 
+This query calculates the number of last touches each campaign is generating. As shown in the image, the weekly newsletter and re-targetting are clearly the two most successful campaigns for generating last touches. 
+
+One of the prompts for this project stated that CoolTShirts only had enough money to re-invest in 5 of their marketing campaigns and tasked me with figuring which 5 should be chosen. With the information I have gathered, I would reccomend re-investing in the following campaigns: *interview with cool tshirts founder*, *getting to know cool tshirts*, *ten crazy cool tshirts facts*, *weekly newsletter*, & *retargetting ad*. By investing in these campaigns CoolTShirts would be sure to have a steady flow of new visitors brought to the site who will eventually purchase something. 
