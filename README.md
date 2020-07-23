@@ -26,3 +26,27 @@ GROUP BY utm_campaign
 ORDER BY 2 desc;
 ```
 ![Results Returned By Query](https://github.com/omcevoy/CoolTShirts/blob/master/firstTouchVals.png)
+
+As shown in the above image, this query returns the campaigns and the amount of first touches the campaign generated. While first touches and page visits are certainly important, what truly matters is whether or not these visitors are making purchases. To better gauge this I looked at the last touch of the users, instead of first touch, and specifically the users whose last touch occurred on the purchase page. 
+
+```
+WITH last_touch AS (
+    SELECT user_id,
+        MAX(timestamp) as last_touch_at
+    FROM page_visits
+    WHERE page_name LIKE '4%'
+    GROUP BY user_id),
+lt_attributes AS (SELECT lt.user_id,
+    lt.last_touch_at,
+    pv.utm_source,
+		pv.utm_campaign
+FROM last_touch lt
+JOIN page_visits pv
+    ON lt.user_id = pv.user_id
+    AND lt.last_touch_at = pv.timestamp)
+SELECT utm_campaign, COUNT(*)
+FROM lt_attributes
+GROUP BY utm_campaign
+ORDER BY 2 desc;
+```
+![Results Returned By Query](https://github.com/omcevoy/CoolTShirts/blob/master/lastToPurch.png)
