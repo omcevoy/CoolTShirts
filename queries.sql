@@ -74,4 +74,6 @@ GROUP BY utm_campaign
 ORDER BY 2 desc;
 
 -- 7 - CoolTShirts can re-invest in 5 campaigns. Given your findings in the project, which should they pick and why?
-CoolTShirts should re-invest in these 5 campaigns: weekly-newsletter, retargetting-ad, retargetting-campaign, paid-search, & getting-to-know-cool-tshirts. These 5 campaigns, returned in the previous query, resulted with the most purchases
+
+-- CoolTShirts should re-invest in these 5 campaigns: weekly-newsletter, retargetting-ad, retargetting-campaign, 
+-- paid-search, & getting-to-know-cool-tshirts. These 5 campaigns, returned in the previous query, resulted with the most purchases
